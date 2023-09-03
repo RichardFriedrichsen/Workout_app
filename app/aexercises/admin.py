@@ -2,7 +2,8 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import exercise, workout
+from .models import Exercise, Workout, WorkoutExercise
 
-admin.site.register(exercise)
-admin.site.register(workout)
+admin.site.register(Exercise)
+admin.site.register(Workout)
+admin.site.register(WorkoutExercise)
