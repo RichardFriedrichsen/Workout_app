@@ -1,7 +1,6 @@
 from django.db import models
 
-
-# Model for exercises
+# Exercises to select from
 class Exercise(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
@@ -12,11 +11,11 @@ class Exercise(models.Model):
 # Model for workouts
 class Workout(models.Model):
     title = models.CharField(max_length=200)
-    date = models.DateField()
+    date = models.DateField(auto_now_add=True)
     exercises = models.ManyToManyField(Exercise, through='WorkoutExercise')
 
     def __str__(self):
-        return self.title
+        return f"{self.date} {self.title}"
 
 # Model for exercises within workouts
 class WorkoutExercise(models.Model):

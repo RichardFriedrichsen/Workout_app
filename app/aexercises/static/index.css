@@ -1,0 +1,31 @@
+body{
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    margin: 0;
+}
+
+.left-nav{
+    background-color: #343a40;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 12;
+}
+.header{
+    grid-column-start: 3;
+    grid-column-end: 12;
+    
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.graph-section{
+    grid-column-start: 3;
+    grid-column-end: 12;
+
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
